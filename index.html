@@ -1,53 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laura Aloud</title>
+    <meta name="description" content="Laura Aloud's portfolio">
+    <meta name="author" content="Laura Aloud">
+    <meta name="theme-color" content="#f7c6d9">
+    <title>Laura Aloud | Portfolio</title>
 </head>
+
 <body>
     <header>
-        <a href="#"><img src="" alt=""></a>
-        <nav>
+        <a href="#home">
+            <img src="images/laura-logo.png" width="100" alt="Laura Aloud logo">
+        </a>
+        <nav aria-label="Primary">
             <ul>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section>
-            <h1>Laura Aloud</h1>
+        <section id="home" aria-labelledby="home-heading">
+            <h1 id="home-heading">Laura Aloud</h1>
+            <p>Computer Science Student at Michigan State University</p>
+            <p>Interested in software development and cybersecurity.</p>
         </section>
-        <section id="about">
-            <h2>About</h2>
-            <p></p>
+
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <p>I am a Computer Science student at Michigan State University with an interest in software development, cybersecurity, and emerging technologies. I have experience with Python and C++, along with skills in problem solving, analytical thinking, communication, and teamwork.</p>
         </section>
-        <section id="projects">
-            <h2>Projects</h2>
+
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+            <p>A selection of projects I have completed through my computer science coursework.</p>
+
             <article>
-                <h3></h3>
-                <p></p>
+                <h3>CSE 325: File Integrity Monitor</h3>
+                <p>Developed a C++ file integrity monitoring program that creates a SHA-256 baseline of files in a directory and detects changes during later scans. The program reports files that have been added, removed, or modified.</p>
+                <ul>
+                    <li>C++</li>
+                    <li>SHA-256 Hashing</li>
+                    <li>File System Operations</li>
+                </ul>
+                <details>
+                    <summary>What does this project do?</summary>
+                    <p>The program creates a baseline of file hashes and compares future scans against it to identify files that have been added, removed, or modified.</p>
+                </details>
+                <figure>
+                    <img src="images/cse325.png" width="600" alt="File Integrity Monitor running in the terminal">
+                    <figcaption>File Integrity Monitor detecting an added file during a scan.</figcaption>
+                </figure>
             </article>
+
             <article>
-                <h3></h3>
-                <p></p>
-            </article>
-            <article>
-                <h3></h3>
-                <p></p>
+                <h3>CSE 335: Machine Demonstrator</h3>
+                <p>Developed an object-oriented C++ simulation featuring multiple animated machine systems. The project uses reusable components such as motors, pulleys, conveyors, and other moving parts that interact to create different machines and animations within a larger application.</p>
+                <ul>
+                    <li>C++</li>
+                    <li>Object-Oriented Programming</li>
+                    <li>Reusable Components</li>
+                    <li>Animation</li>
+                </ul>
+                <details>
+                    <summary>What does this project do?</summary>
+                    <p>The project simulates multiple animated machine systems using reusable components that work together to transfer motion and create different animations.</p>
+                </details>
+                <figure>
+                    <img src="images/demo2.gif" width="600" alt="Animated machine system running">
+                    <figcaption>Machine Demonstrator showing the animated motor and connected machine components.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/demo1.gif" width="600" alt="Animated machine integrated into a larger application">
+                    <figcaption>Machine system integrated into a larger animated application.</figcaption>
+                </figure>
             </article>
         </section>
-        <section id="contact">
-            <h2>Contact</h2>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            <p>Feel free to contact me or view my work on GitHub.</p>
             <address>
-                <p>aloudlau@msu.edu</p>
+                <p>Email: <a href="mailto:aloudlau@msu.edu">aloudlau@msu.edu</a></p>
             </address>
+            <p>GitHub: <a href="https://github.com/lauraaloud">github.com/lauraaloud</a></p>
         </section>
     </main>
+
     <footer>
         <p>Copyright &copy; 2026 Laura Aloud</p>
+        <p><a href="#home">Back to top</a></p>
     </footer>
 </body>
+
 </html>
