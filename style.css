@@ -97,6 +97,16 @@ nav a:hover {
     color: var(--primary-pink);
 }
 
+header img {
+    border-radius: 50%;
+    border: 3px solid var(--primary-pink);
+    transition: transform 0.3s;
+}
+
+header img:hover {
+    transform: rotate(-5deg);
+}
+
 
 /* ---------- HOME ---------- */
 
@@ -117,6 +127,19 @@ nav a:hover {
     margin-top: 30px;
 }
 
+audio {
+    margin-top: 10px;
+    padding: 10px;
+    border: 3px solid var(--primary-pink);
+    border-radius: 30px;
+    background-color: var(--light-pink);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.4s ease;
+}
+
+audio:hover {
+    box-shadow: 0 0 15px rgba(217, 140, 163, 0.7);
+}
 
 /* ---------- ABOUT ---------- */
 
@@ -128,6 +151,11 @@ nav a:hover {
     border: 2px solid var(--light-pink);
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.4s ease;
+}
+
+#about:hover {
+    box-shadow: 0 0 15px rgba(217, 140, 163, 0.7);
 }
 
 #about p {
@@ -151,6 +179,11 @@ nav a:hover {
     border: 2px solid var(--light-pink);
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.4s ease;
+}
+
+#projects article:hover {
+    box-shadow: 0 0 15px rgba(217, 140, 163, 0.7);
 }
 
 #projects h3 {
@@ -185,8 +218,13 @@ details {
     padding: 15px;
     margin-top: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.4s ease;
 }
 
+details:hover {
+    box-shadow: 0 0 15px rgba(217, 140, 163, 0.7);
+}
 summary {
     color: var(--text-color);
     font-weight: bold;
@@ -204,6 +242,11 @@ summary {
     border: 2px solid var(--light-pink);
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.4s ease;
+}
+
+#contact:hover {
+    box-shadow: 0 0 15px rgba(217, 140, 163, 0.7);
 }
 
 fieldset {
