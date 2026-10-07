@@ -1,0 +1,249 @@
+/* ---------- LOCAL FONTS ---------- */
+
+/* loads the regular DM Sans font from the fonts folder */
+@font-face {
+    font-family: 'DM Sans';
+    src: url('fonts/DM_Sans/static/DMSans_18pt-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* loads the bold version of DM Sans */
+@font-face {
+    font-family: 'DM Sans';
+    src: url('fonts/DM_Sans/static/DMSans_18pt-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* loads DM Serif Display for the headings */
+@font-face {
+    font-family: 'DM Serif Display';
+    src: url('fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ---------- COLORS ---------- */
+
+:root {
+    --background-color: #fff8fa;
+    --section-color: #ffffff;
+    --primary-pink: #d98ca3;
+    --light-pink: #f7dce5;
+    --text-color: #4a4044;
+}
+
+
+/* ---------- GENERAL ---------- */
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* uses DM Serif Display for all main headings */
+h1,
+h2,
+h3 {
+    font-family: 'DM Serif Display', serif;
+}
+
+h1 {
+    color: var(--primary-pink);
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: var(--primary-pink);
+    font-size: 28px;
+    text-align: center;
+}
+
+.decor {
+    text-align: center;
+}
+
+
+/* ---------- HEADER & NAVIGATION ---------- */
+
+header {
+    background-color: var(--light-pink);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-pink);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--primary-pink);
+}
+
+
+/* ---------- HOME ---------- */
+
+#home {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--section-color);
+    border-bottom: 3px solid var(--primary-pink);
+}
+
+#home p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#home h2 {
+    color: var(--primary-pink);
+    margin-top: 30px;
+}
+
+
+/* ---------- ABOUT ---------- */
+
+#about {
+    background-color: var(--section-color);
+    padding: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+    border: 2px solid var(--light-pink);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+#about p {
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+
+/* ---------- PROJECTS ---------- */
+
+#projects {
+    padding: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+#projects article {
+    background-color: var(--section-color);
+    padding: 25px;
+    margin: 30px 0;
+    border: 2px solid var(--light-pink);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+#projects h3 {
+    color: var(--primary-pink);
+    font-size: 22px;
+}
+
+#projects ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#projects li {
+    margin: 8px 0;
+}
+
+#projects img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid var(--light-pink);
+}
+
+figcaption {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+details {
+    background-color: var(--light-pink);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+summary {
+    color: var(--text-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* ---------- CONTACT ---------- */
+
+#contact {
+    background-color: var(--section-color);
+    padding: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+    border: 2px solid var(--light-pink);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+fieldset {
+    border: 2px solid var(--light-pink);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+legend {
+    color: var(--primary-pink);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#contact a {
+    color: var(--primary-pink);
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: var(--text-color);
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background-color: var(--light-pink);
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    border-top: 3px solid var(--primary-pink);
+}
+
+footer a {
+    color: var(--primary-pink);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--text-color);
+}
