@@ -40,18 +40,21 @@ The portfolio uses semantic HTML and includes:
 
 ## ♡ CSS Features
 
-The portfolio uses a separate CSS stylesheet to create a consistent design and includes:
+The portfolio uses a separate CSS stylesheet to create a consistent and responsive design and includes:
 
 - CSS custom properties for the color palette
 - Multiple selector types
-- Custom spacing and typography
-- Rounded corners
-- Drop shadows
-- Styled images
-- Hover effects for links
+- Custom fonts, spacing, and typography
+- Rounded corners and drop shadows
+- Hover effects for links, images, and sections
 - A consistent pink color palette
-- Centered sections and decorative elements
+- Flexbox navigation that stays centered and wraps on smaller screens
+- CSS Grid for the projects section
+- Responsive project cards with images beside text on larger screens
+- Mobile-first media queries using `min-width`
+- Four responsive breakpoints at 480px, 768px, 1024px, and 1280px
 - Responsive images using `max-width`
+- Adjusted spacing and padding for different screen sizes
 
 ## ♡ Validation
 

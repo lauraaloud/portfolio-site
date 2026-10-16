@@ -1,292 +1,896 @@
 /* ---------- LOCAL FONTS ---------- */
 
-/* loads the regular DM Sans font from the fonts folder */
+/* regular DM Sans font */
+
 @font-face {
+
     font-family: 'DM Sans';
+
     src: url('fonts/DM_Sans/static/DMSans_18pt-Regular.ttf') format('truetype');
+
     font-weight: normal;
+
     font-style: normal;
+
 }
 
-/* loads the bold version of DM Sans */
+/* bold DM Sans font */
+
 @font-face {
+
     font-family: 'DM Sans';
+
     src: url('fonts/DM_Sans/static/DMSans_18pt-Bold.ttf') format('truetype');
+
     font-weight: bold;
+
     font-style: normal;
+
 }
 
-/* loads DM Serif Display for the headings */
+/* font for the headings */
+
 @font-face {
-    font-family: 'DM Serif Display';
-    src: url('fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
+    font-family: 'DM Serif Display';
+
+    src: url('fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf') format('truetype');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
 
 /* ---------- COLORS ---------- */
 
 :root {
-    --background-color: #fff8fa;
-    --section-color: #ffffff;
-    --primary-pink: #d98ca3;
-    --light-pink: #f7dce5;
-    --text-color: #4a4044;
-}
 
+    --background-color: #fff8fa;
+
+    --section-color: #ffffff;
+
+    --primary-pink: #d98ca3;
+
+    --light-pink: #f7dce5;
+
+    --text-color: #4a4044;
+
+}
 
 /* ---------- GENERAL ---------- */
 
-body {
-    font-family: 'DM Sans', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+/* includes padding in widths */
+
+*,
+
+*::before,
+
+*::after {
+
+    box-sizing: border-box;
+
 }
 
-/* uses DM Serif Display for all main headings */
+body {
+
+    font-family: 'DM Sans', sans-serif;
+
+    background-color: var(--background-color);
+
+    color: var(--text-color);
+
+    overflow-wrap: anywhere;
+
+}
+
+/* keeps images within their sections */
+
+img {
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+/* uses the serif font for headings */
+
 h1,
+
 h2,
+
 h3 {
+
     font-family: 'DM Serif Display', serif;
+
 }
 
 h1 {
+
     color: var(--primary-pink);
-    font-size: 40px;
+
+    font-size: 32px;
+
     margin-bottom: 15px;
+
 }
 
 h2 {
+
     color: var(--primary-pink);
+
     font-size: 28px;
+
     text-align: center;
+
 }
+
+/* gives the decorations equal space above and below */
 
 .decor {
-    text-align: center;
-}
 
+    text-align: center;
+
+    margin: 45px 0;
+
+}
 
 /* ---------- HEADER & NAVIGATION ---------- */
 
 header {
+
     background-color: var(--light-pink);
+
     padding: 20px;
+
     text-align: center;
+
     border-bottom: 3px solid var(--primary-pink);
+
 }
 
+/* flexbox keeps the nav links centered */
+
 nav ul {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px 12px;
+
     list-style: none;
+
     padding: 0;
+
+    margin: 20px 0 0;
+
 }
 
 nav li {
-    display: inline-block;
-    margin: 10px;
+
+    flex: 0 1 auto;
+
+    min-width: 0;
+
+    margin: 0;
+
 }
 
+/* pink buttons for the nav links */
+
 nav a {
+
+    display: block;
+
     color: var(--text-color);
+
+    background-color: var(--background-color);
+
     text-decoration: none;
+
     font-weight: bold;
+
+    padding: 10px 14px;
+
+    border: 2px solid var(--primary-pink);
+
+    border-radius: 25px;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 
 nav a:hover {
-    color: var(--primary-pink);
+
+    background-color: var(--primary-pink);
+
+    color: white;
+
 }
 
 header img {
+
     border-radius: 50%;
+
     border: 3px solid var(--primary-pink);
+
     transition: transform 0.3s;
+
 }
 
 header img:hover {
-    transform: rotate(-5deg);
-}
 
+    transform: rotate(-5deg);
+
+}
 
 /* ---------- HOME ---------- */
 
 #home {
+
     text-align: center;
-    padding: 60px 20px;
+
+    padding: 40px 16px;
+
     background-color: var(--section-color);
+
     border-bottom: 3px solid var(--primary-pink);
+
 }
 
 #home p {
+
     font-size: 18px;
+
     line-height: 1.6;
+
 }
 
 #home h2 {
+
     color: var(--primary-pink);
+
     margin-top: 30px;
+
 }
 
 audio {
+
+    width: 100%;
+
+    max-width: 326px;
+
     margin-top: 10px;
+
     padding: 10px;
+
     border: 3px solid var(--primary-pink);
+
     border-radius: 30px;
+
     background-color: var(--light-pink);
+
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
     transition: box-shadow 0.4s ease;
+
 }
 
 audio:hover {
+
     box-shadow: 0 0 15px rgba(217, 140, 163, 0.7);
+
 }
 
 /* ---------- ABOUT ---------- */
 
 #about {
+
     background-color: var(--section-color);
-    padding: 30px;
+
+    padding: 20px;
+
     max-width: 900px;
-    margin: 40px auto;
+
+    margin: 24px auto;
+
     border: 2px solid var(--light-pink);
+
     border-radius: 15px;
+
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
     transition: box-shadow 0.4s ease;
+
 }
 
 #about:hover {
+
     box-shadow: 0 0 15px rgba(217, 140, 163, 0.7);
+
 }
 
 #about p {
-    line-height: 1.7;
-    font-size: 17px;
-}
 
+    line-height: 1.7;
+
+    font-size: 17px;
+
+}
 
 /* ---------- PROJECTS ---------- */
 
+/* grid stacks the project cards */
+
 #projects {
-    padding: 30px;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr);
+
+    align-items: stretch;
+
+    gap: 16px;
+
+    padding: 20px 12px;
+
     max-width: 900px;
-    margin: 40px auto;
+
+    margin: 20px auto;
+
 }
 
+/* keeps the title close to the subtitle */
+
+#projects > h2 {
+
+    text-align: center;
+
+    margin: 0;
+
+}
+
+/* keeps the subtitle close to the first card */
+
+#projects > p:not(.decor) {
+
+    text-align: center;
+
+    margin: 0 0 5px;
+
+}
+
+/* keeps the decorations centered */
+
+#projects > .decor {
+
+    text-align: center;
+
+    margin: 10px 0;
+
+}
+
+/* project card boxes */
+
 #projects article {
+
     background-color: var(--section-color);
-    padding: 25px;
-    margin: 30px 0;
+
+    padding: 16px;
+
+    margin: 0;
+
+    min-width: 0;
+
     border: 2px solid var(--light-pink);
+
     border-radius: 15px;
+
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
     transition: box-shadow 0.4s ease;
+
 }
 
 #projects article:hover {
+
     box-shadow: 0 0 15px rgba(217, 140, 163, 0.7);
+
 }
 
 #projects h3 {
+
     color: var(--primary-pink);
+
     font-size: 22px;
+
 }
 
 #projects ul {
+
     list-style: none;
+
     padding-left: 0;
+
 }
 
 #projects li {
+
     margin: 8px 0;
+
 }
 
+/* gives images more room on phones */
+
+#projects figure {
+
+    min-width: 0;
+
+    margin: 20px 0;
+
+}
+
+/* keeps images inside the cards */
+
 #projects img {
+
+    box-sizing: border-box;
+
     max-width: 100%;
+
     height: auto;
+
     border-radius: 10px;
+
     border: 2px solid var(--light-pink);
+
 }
 
 figcaption {
+
     font-size: 14px;
+
     font-style: italic;
+
     margin-top: 8px;
+
 }
 
 details {
+
     background-color: var(--light-pink);
+
     padding: 15px;
+
     margin-top: 20px;
+
     border-radius: 10px;
+
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
     transition: box-shadow 0.4s ease;
+
 }
 
 details:hover {
+
     box-shadow: 0 0 15px rgba(217, 140, 163, 0.7);
-}
-summary {
-    color: var(--text-color);
-    font-weight: bold;
-    cursor: pointer;
+
 }
 
+summary {
+
+    color: var(--text-color);
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
 
 /* ---------- CONTACT ---------- */
 
 #contact {
+
     background-color: var(--section-color);
-    padding: 30px;
+
+    padding: 20px;
+
     max-width: 900px;
-    margin: 40px auto;
+
+    margin: 24px auto;
+
     border: 2px solid var(--light-pink);
+
     border-radius: 15px;
+
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
     transition: box-shadow 0.4s ease;
+
 }
 
 #contact:hover {
+
     box-shadow: 0 0 15px rgba(217, 140, 163, 0.7);
+
 }
 
 fieldset {
+
+    min-width: 0;
+
+    margin: 0;
+
     border: 2px solid var(--light-pink);
+
     border-radius: 10px;
-    padding: 20px;
+
+    padding: 12px;
+
 }
 
 legend {
+
     color: var(--primary-pink);
+
     font-weight: bold;
+
     font-size: 20px;
+
 }
 
 #contact a {
+
     color: var(--primary-pink);
+
     font-weight: bold;
+
 }
 
 #contact a:hover {
-    color: var(--text-color);
-}
 
+    color: var(--text-color);
+
+}
 
 /* ---------- FOOTER ---------- */
 
 footer {
+
     background-color: var(--light-pink);
+
     text-align: center;
+
     padding: 25px;
+
     margin-top: 40px;
+
     border-top: 3px solid var(--primary-pink);
+
 }
 
 footer a {
+
     color: var(--primary-pink);
+
     font-weight: bold;
+
     text-decoration: none;
+
 }
 
 footer a:hover {
+
     color: var(--text-color);
+
 }
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* larger phones */
+
+@media (min-width: 480px) {
+
+    h1 {
+
+        font-size: 40px;
+
+    }
+
+    #about,
+
+    #contact {
+
+        padding: 30px;
+
+        margin: 40px auto;
+
+    }
+
+    #projects {
+
+        padding: 20px 24px;
+
+    }
+
+    #projects article {
+
+        padding: 25px;
+
+    }
+
+    fieldset {
+
+        padding: 20px;
+
+    }
+
+    nav ul {
+
+        gap: 15px;
+
+    }
+
+/* more button padding on wider screens */
+
+    nav a {
+
+        padding: 10px 18px;
+
+    }
+
+    #home {
+
+        padding: 65px 25px;
+
+    }
+
+}
+
+/* tablets */
+
+@media (min-width: 768px) {
+
+    nav ul {
+
+        gap: 16px 20px;
+
+    }
+
+    #projects figure {
+
+        margin: 24px 16px;
+
+    }
+
+    #home {
+
+        padding: 70px 30px;
+
+    }
+
+    #projects {
+
+        padding: 25px 30px;
+
+        gap: 20px;
+
+    }
+
+    #about,
+
+    #contact {
+
+        padding: 35px;
+
+    }
+
+}
+
+/* laptops and desktops */
+
+@media (min-width: 1024px) {
+
+    #home {
+
+        padding: 80px 40px;
+
+    }
+
+    #projects {
+
+        gap: 24px;
+
+        max-width: 900px;
+
+    }
+
+    #about,
+
+    #contact {
+
+        max-width: 900px;
+
+    }
+
+}
+
+/* larger screens */
+
+@media (min-width: 1280px) {
+
+    #home p {
+
+        max-width: 760px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+    #projects article {
+
+        padding: 30px;
+
+    }
+
+}
+
+/* stacks the content inside each card */
+
+#projects article {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 16px;
+
+    align-items: start;
+
+}
+
+/* keeps grid items inside the card */
+
+#projects article > * {
+
+    min-width: 0;
+
+    margin: 0;
+
+}
+
+/* puts images beside the text on larger screens */
+
+@media (min-width: 1024px) {
+
+    #projects article {
+
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+        gap: 12px 24px;
+
+        align-content: start;
+
+    }
+
+    #projects article > h3 {
+
+        grid-column: 1 / -1;
+
+        grid-row: 1;
+
+    }
+
+    #projects article > p {
+
+        grid-column: 1;
+
+        grid-row: 2;
+
+    }
+
+    #projects article > ul {
+
+        grid-column: 1;
+
+        grid-row: 3;
+
+    }
+
+    #projects article > details {
+
+        grid-column: 1;
+
+        grid-row: 4;
+
+    }
+
+    #projects article > p,
+
+    #projects article > ul {
+
+        align-self: start;
+
+    }
+
+    #projects article > figure {
+
+        grid-column: 2;
+
+        grid-row: 2 / 4;
+
+    }
+
+/* gives the second image its own space */
+
+    #projects article > figure + figure {
+
+        grid-row: 4;
+
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+/* keeps the first card's text together */
+
+    #projects article:first-of-type {
+
+        grid-template-rows: auto min-content min-content min-content 1fr;
+
+        row-gap: 0;
+
+    }
+
+    #projects article:first-of-type > h3 {
+
+        margin-bottom: 12px;
+
+    }
+
+/* extra image height goes below the text */
+
+    #projects article:first-of-type > figure {
+
+        grid-row: 2 / 6;
+
+    }
+
+}
+
+
+/* ---------- AI USE DOCUMENTATION ----------
+
+1. responsive layout
+prompt: improve my responsive design using mobile-first
+breakpoints. keep my pink theme and make sure everything
+fits on phones, tablets, and desktops.
+output: adjusted spacing, images, and added a 1280px
+breakpoint.
+
+2. navigation
+prompt: use flexbox to keep my nav links centered and
+wrapping on smaller screens without changing the design.
+output: adjusted nav gaps and button padding.
+
+3. project cards
+prompt: improve my project cards using css grid. keep
+the cards stacked, but put images beside text on desktop.
+output: added a responsive grid inside each card.
+
+4. spacing
+prompt: reduce the gap between my project description
+and skills without changing the design.
+output: adjusted grid rows and spacing.
+
+*/
