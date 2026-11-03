@@ -870,6 +870,20 @@ footer a:hover {
 
 }
 
+
+
+/* ---------- FOOTER ACCESSIBILITY ---------- */
+
+footer a {
+    color: #873653;
+}
+
+footer a:hover,
+footer a:focus-visible {
+    color: var(--text-color);
+}
+
+
 /* ---------- AI USE DOCUMENTATION ----------*
 
 *1. responsive layout*
