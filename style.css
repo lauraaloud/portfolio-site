@@ -44,16 +44,21 @@
 
 /* ---------- COLORS ---------- */
 
-
 :root {
-    --background-color: #fff8fa;
-    --section-color: #ffffff;
-    --primary-pink: #d98ca3;
-    --dark-pink: #a64d70;
-    --light-pink: #f7dce5;
-    --text-color: #4a4044;
-}
 
+    --background-color: #fff8fa;
+
+    --section-color: #ffffff;
+
+    --primary-pink: #d98ca3;
+
+    --dark-pink: #a64d70;
+
+    --light-pink: #f7dce5;
+
+    --text-color: #4a4044;
+
+}
 
 /* ---------- GENERAL ---------- */
 
@@ -105,7 +110,7 @@ h3 {
 
 h1 {
 
-    color: var(--primary-pink);
+    color: var(--dark-pink);
 
     font-size: 32px;
 
@@ -115,7 +120,7 @@ h1 {
 
 h2 {
 
-    color: var(--primary-pink);
+    color: var(--dark-pink);
 
     font-size: 28px;
 
@@ -205,9 +210,9 @@ nav a {
 
 nav a:hover {
 
-    background-color: var(--primary-pink);
+    background-color: var(--light-pink);
 
-    color: white;
+    color: var(--text-color);
 
 }
 
@@ -251,7 +256,7 @@ header img:hover {
 
 #home h2 {
 
-    color: var(--primary-pink);
+    color: var(--dark-pink);
 
     margin-top: 30px;
 
@@ -403,7 +408,7 @@ audio:hover {
 
 #projects h3 {
 
-    color: var(--primary-pink);
+    color: var(--dark-pink);
 
     font-size: 22px;
 
@@ -535,7 +540,7 @@ fieldset {
 
 legend {
 
-    color: var(--primary-pink);
+    color: var(--dark-pink);
 
     font-weight: bold;
 
@@ -545,7 +550,7 @@ legend {
 
 #contact a {
 
-    color: var(--primary-pink);
+    color: var(--dark-pink);
 
     font-weight: bold;
 
@@ -575,7 +580,7 @@ footer {
 
 footer a {
 
-    color: var(--primary-pink);
+    color: var(--dark-pink);
 
     font-weight: bold;
 
@@ -865,29 +870,48 @@ footer a:hover {
 
 }
 
+/* ---------- AI USE DOCUMENTATION ----------*
 
-/* ---------- AI USE DOCUMENTATION ----------
+*1. responsive layout*
 
-1. responsive layout
-prompt: improve my responsive design using mobile-first
-breakpoints. keep my pink theme and make sure everything
-fits on phones, tablets, and desktops.
-output: adjusted spacing, images, and added a 1280px
-breakpoint.
+*prompt: improve my responsive design using mobile-first*
 
-2. navigation
-prompt: use flexbox to keep my nav links centered and
-wrapping on smaller screens without changing the design.
-output: adjusted nav gaps and button padding.
+*breakpoints. keep my pink theme and make sure everything*
 
-3. project cards
-prompt: improve my project cards using css grid. keep
-the cards stacked, but put images beside text on desktop.
-output: added a responsive grid inside each card.
+*fits on phones, tablets, and desktops.*
 
-4. spacing
-prompt: reduce the gap between my project description
-and skills without changing the design.
-output: adjusted grid rows and spacing.
+*output: adjusted spacing, images, and added a 1280px*
 
-*/
+*breakpoint.*
+
+*2. navigation*
+
+*prompt: use flexbox to keep my nav links centered and*
+
+*wrapping on smaller screens without changing the design.*
+
+*output: adjusted nav gaps and button padding.*
+
+*3. project cards*
+
+*prompt: improve my project cards using css grid. keep*
+
+*the cards stacked, but put images beside text on desktop.*
+
+*output: added a responsive grid inside each card.*
+
+*4. spacing*
+
+*prompt: reduce the gap between my project description*
+
+*and skills without changing the design.*
+
+*output: adjusted grid rows and spacing.*
+
+**/
+
+/* visible keyboard focus for navigation and links */
+a:focus-visible, summary:focus-visible {
+    outline: 3px solid var(--dark-pink);
+    outline-offset: 3px;
+}
