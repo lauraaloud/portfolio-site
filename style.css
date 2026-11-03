@@ -44,19 +44,16 @@
 
 /* ---------- COLORS ---------- */
 
+
 :root {
-
     --background-color: #fff8fa;
-
     --section-color: #ffffff;
-
     --primary-pink: #d98ca3;
-
+    --dark-pink: #a64d70;
     --light-pink: #f7dce5;
-
     --text-color: #4a4044;
-
 }
+
 
 /* ---------- GENERAL ---------- */
 
