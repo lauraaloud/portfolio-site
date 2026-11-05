@@ -294,71 +294,71 @@ footer a:focus-visible {
 /* larger phones */
 @media (min-width: 480px) {
     h1 {
-        font-size: 40px;
+    font-size: 40px;
     }
     #about,
     #contact {
-        padding: 30px;
-        margin: 40px auto;
+    padding: 30px;
+    margin: 40px auto;
     }
     #projects {
-        padding: 20px 24px;
+    padding: 20px 24px;
     }
     #projects article {
-        padding: 25px;
+    padding: 25px;
     }
     fieldset {
-        padding: 20px;
+    padding: 20px;
     }
     nav ul {
-        gap: 15px;
+    gap: 15px;
     }
 /* more button padding on wider screens */
     nav a {
-        padding: 10px 18px;
+    padding: 10px 18px;
     }
     #home {
-        padding: 65px 25px;
+    padding: 65px 25px;
     }
 }
 /* tablets */
 @media (min-width: 768px) {
     nav ul {
-        gap: 16px 20px;
+    gap: 16px 20px;
     }
     #projects figure {
-        margin: 24px 16px;
+    margin: 24px 16px;
     }
     #home {
-        padding: 70px 30px;
+    padding: 70px 30px;
     }
     #projects {
-        padding: 25px 30px;
-        gap: 20px;
+    padding: 25px 30px;
+    gap: 20px;
     }
     #about,
     #contact {
-        padding: 35px;
+    padding: 35px;
     }
 }
 /* laptops and desktops */
 @media (min-width: 1024px) {
     #home {
-        padding: 80px 40px;
+    padding: 80px 40px;
     }
     #projects {
-        gap: 24px;
+    gap: 24px;
     }
 }
 /* larger screens */
 @media (min-width: 1280px) {
     #home p {
-        max-width: 760px;
-        margin-left: auto;
-        margin-right: auto;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
     }
     #projects article {
-        padding: 30px;
+    padding: 30px;
     }
 }
 /* keeps grid items inside the card */
@@ -369,66 +369,75 @@ footer a:focus-visible {
 /* puts images beside the text on larger screens */
 @media (min-width: 1024px) {
     #projects article {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: 12px 24px;
-        align-content: start;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 12px 24px;
+    align-content: start;
     }
     #projects article > h3 {
-        grid-column: 1 / -1;
-        grid-row: 1;
+    grid-column: 1 / -1;
+    grid-row: 1;
     }
     #projects article > p {
-        grid-column: 1;
-        grid-row: 2;
+    grid-column: 1;
+    grid-row: 2;
     }
     #projects article > ul {
-        grid-column: 1;
-        grid-row: 3;
+    grid-column: 1;
+    grid-row: 3;
     }
     #projects article > details {
-        grid-column: 1;
-        grid-row: 4;
+    grid-column: 1;
+    grid-row: 4;
     }
     #projects article > p,
     #projects article > ul {
-        align-self: start;
+    align-self: start;
     }
     #projects article > figure {
-        grid-column: 2;
-        grid-row: 2 / 4;
+    grid-column: 2;
+    grid-row: 2 / 4;
     }
 /* gives the second image its own space */
     #projects article > figure + figure {
-        grid-row: 4;
+    grid-row: 4;
     }
 }
 @media (min-width: 1024px) {
 /* keeps the first card's text together */
     #projects article:first-of-type {
-        grid-template-rows: auto min-content min-content min-content 1fr;
-        row-gap: 0;
+    grid-template-rows: auto min-content min-content min-content 1fr;
+    row-gap: 0;
     }
     #projects article:first-of-type > h3 {
-        margin-bottom: 12px;
+    margin-bottom: 12px;
     }
 /* extra image height goes below the text */
     #projects article:first-of-type > figure {
-        grid-row: 2 / 6;
+    grid-row: 2 / 6;
+    }
+}
+/* visible keyboard focus for navigation and links */
+a:focus-visible,
+summary:focus-visible,
+button:focus-visible,
+audio:focus-visible {
+    outline: 3px solid #873653;
+    outline-offset: 4px;
+    border-radius: 5px;
+}
+/* highlight navigation buttons when using the keyboard */
+nav a:focus-visible {
+    background-color: var(--light-pink);
+    color: var(--text-color);
+}
+/* smooth scrolling while respecting reduced motion preferences */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
     }
 }
 
-/* visible keyboard focus for navigation and links */
-a:focus-visible,
-summary:focus-visible {
-    outline: 3px solid var(--dark-pink);
-    outline-offset: 3px;
-}
-
-
-
-
 /* ---------- AI USE DOCUMENTATION ----------
-
 1. responsive layout
 prompt: improve my responsive design using mobile-first
 breakpoints. keep my pink theme and make sure everything
@@ -451,4 +460,9 @@ prompt: reduce the gap between my project description
 and skills without changing the design.
 output: adjusted grid rows and spacing.
 
+5. accessibility
+prompt: improve keyboard navigation by adding visible focus
+outlines, highlighting focused nav links, and keeping reduced motion preferences without changing my design.
+output: updated keyboard focus styles and added smooth
+scrolling only when reduced motion is not requested.
 */
