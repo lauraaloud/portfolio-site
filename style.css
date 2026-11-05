@@ -423,8 +423,6 @@ images, and the 1280px breakpoint while keeping the pink theme.
 3. project cards: used AI to stack cards on mobile and place images beside
 text on desktop with CSS Grid.
 4. spacing: used AI to reduce gaps between project descriptions and skills.
-5. accessibility cleanup: used AI to consolidate CSS, improve contrast,
-keyboard focus, and font loading. Checked against PageSpeed Insights.
 */
 
 /* visible keyboard focus for navigation and links */
