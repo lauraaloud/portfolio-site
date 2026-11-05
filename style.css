@@ -416,14 +416,6 @@ footer a:focus-visible {
         grid-row: 2 / 6;
     }
 }
-/* ---------- AI USE DOCUMENTATION ----------
-1. responsive layout: used AI to adjust mobile-first breakpoints, spacing,
-images, and the 1280px breakpoint while keeping the pink theme.
-2. navigation: used AI to center and wrap nav links with flexbox.
-3. project cards: used AI to stack cards on mobile and place images beside
-text on desktop with CSS Grid.
-4. spacing: used AI to reduce gaps between project descriptions and skills.
-*/
 
 /* visible keyboard focus for navigation and links */
 a:focus-visible,
@@ -432,12 +424,31 @@ summary:focus-visible {
     outline-offset: 3px;
 }
 
-/* reduce animation for visitors who request it */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-    }
-}
+
+
+
+/* ---------- AI USE DOCUMENTATION ----------
+
+1. responsive layout
+prompt: improve my responsive design using mobile-first
+breakpoints. keep my pink theme and make sure everything
+fits on phones, tablets, and desktops.
+output: adjusted spacing, images, and added a 1280px
+breakpoint.
+
+2. navigation
+prompt: use flexbox to keep my nav links centered and
+wrapping on smaller screens without changing the design.
+output: adjusted nav gaps and button padding.
+
+3. project cards
+prompt: improve my project cards using css grid. keep
+the cards stacked, but put images beside text on desktop.
+output: added a responsive grid inside each card.
+
+4. spacing
+prompt: reduce the gap between my project description
+and skills without changing the design.
+output: adjusted grid rows and spacing.
+
+*/
