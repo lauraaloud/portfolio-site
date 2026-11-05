@@ -56,9 +56,27 @@ The portfolio uses a separate CSS stylesheet to create a consistent and responsi
 - Responsive images using `max-width`
 - Adjusted spacing and padding for different screen sizes
 
+## ♡ Accessibility Features
+
+The portfolio includes accessibility improvements to make the website easier to use for everyone.
+
+- Semantic HTML and descriptive image alt text
+- ARIA labels for improved screen reader accessibility
+- Improved color contrast for headings, links, and text
+- Visible keyboard focus outlines for links and interactive elements
+- Keyboard-friendly navigation using Tab, Shift + Tab, and Enter
+- Accessible expandable project descriptions using `details` and `summary`
+- Smooth scrolling that respects reduced-motion preferences
+- Improved font loading using `font-display: swap`
+- Accessibility testing using Google PageSpeed Insights
+
+For more information about the accessibility audit and fixes, see [ACCESSIBILITY.md](ACCESSIBILITY.md).
+
 ## ♡ Validation
 
 The HTML was checked using the W3C HTML Validator and passed with no errors or warnings.
+
+The portfolio was also tested using Google PageSpeed Insights to identify and fix accessibility issues.
 
 ## ♡ Author
 
