@@ -33,6 +33,19 @@ After making the changes, I ran PageSpeed Insights again to check my accessibili
 **Desktop Accessibility:** 100
 
 
+## ♡ JavaScript Accessibility
+
+I also added accessibility features for my new interactive scrapbook and dark mode.
+
+- Added ARIA labels to the theme toggle and scrapbook buttons.
+- Added keyboard support for opening and closing the scrapbook.
+- Added screen reader announcements when switching projects.
+- Kept reduced-motion support for animations.
+- Tested the updated website using Google PageSpeed Insights.
+
+The updated portfolio received a 100 accessibility score.
+
+
 ## ♡ Screenshots
 
 ### Mobile Accessibility Results
