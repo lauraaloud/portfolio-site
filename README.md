@@ -1,3 +1,4 @@
+
 # ୨୧ Laura Aloud's Portfolio ୨୧
 
 This repository contains my personal portfolio website created for MI 349. The portfolio introduces me, highlights some of my computer science coursework and projects, and provides ways to contact me.
@@ -11,7 +12,7 @@ I am a Computer Science student at Michigan State University with a concentratio
 - Home and introduction
 - Audio introduction
 - About me
-- Projects
+- Interactive project scrapbook
 - Contact information
 
 ## ♡ Featured Projects
@@ -30,12 +31,12 @@ The portfolio uses semantic HTML and includes:
 
 - Semantic elements such as `header`, `nav`, `main`, `section`, `article`, and `footer`
 - Images and animated GIFs
-- Audio
+- Audio introduction
 - `details` and `summary` elements
 - `figure` and `figcaption` elements
 - `abbr` elements
 - Internal navigation links
-- ARIA labels
+- ARIA labels and accessible buttons
 - Metadata and a custom favicon
 
 ## ♡ CSS Features
@@ -43,18 +44,36 @@ The portfolio uses semantic HTML and includes:
 The portfolio uses a separate CSS stylesheet to create a consistent and responsive design and includes:
 
 - CSS custom properties for the color palette
+- Light and dark mode color palettes
 - Multiple selector types
-- Custom fonts, spacing, and typography
+- DM Sans and DM Serif Display fonts
+- Custom spacing and typography
 - Rounded corners and drop shadows
-- Hover effects for links, images, and sections
-- A consistent pink color palette
+- Hover effects for links and buttons
+- A vintage pink scrapbook theme
 - Flexbox navigation that stays centered and wraps on smaller screens
-- CSS Grid for the projects section
-- Responsive project cards with images beside text on larger screens
+- CSS Grid for responsive layouts
+- Interactive scrapbook styling with notebook pages and project images
 - Mobile-first media queries using `min-width`
 - Four responsive breakpoints at 480px, 768px, 1024px, and 1280px
 - Responsive images using `max-width`
 - Adjusted spacing and padding for different screen sizes
+
+## ♡ JavaScript Features
+
+The portfolio uses a separate JavaScript file to add interactive features, including:
+
+- Light and dark mode toggle
+- Theme preference saved using localStorage
+- Automatic detection of system color preferences
+- ScrollReveal library for scroll animations
+- PageFlip library for an interactive project scrapbook
+- Clickable scrapbook cover that opens and closes
+- Project buttons to switch between CSE 325 and CSE 335
+- Previous and next page navigation
+- Keyboard support for interactive elements
+- Reduced-motion support
+- Fallback layout if the PageFlip library is unavailable
 
 ## ♡ Accessibility Features
 
@@ -65,8 +84,10 @@ The portfolio includes accessibility improvements to make the website easier to 
 - Improved color contrast for headings, links, and text
 - Visible keyboard focus outlines for links and interactive elements
 - Keyboard-friendly navigation using Tab, Shift + Tab, and Enter
+- Skip-to-content link
 - Accessible expandable project descriptions using `details` and `summary`
-- Smooth scrolling that respects reduced-motion preferences
+- Reduced-motion preferences respected
+- Accessible theme toggle and scrapbook controls
 - Improved font loading using `font-display: swap`
 - Accessibility testing using Google PageSpeed Insights
 

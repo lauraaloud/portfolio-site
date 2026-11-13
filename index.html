@@ -1,163 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Laura Aloud's computer science portfolio featuring software development and cybersecurity projects.">
+  <meta name="author" content="Laura Aloud">
+  <meta name="theme-color" content="#fbf3ea">
 
-    <!-- makes the website display properly on different screen sizes -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laura Aloud | Portfolio</title>
+  <link rel="icon" href="images/laura-logo.png">
 
-    <!-- provides a description of my portfolio -->
-    <meta name="description" content="Laura Aloud's portfolio">
+  <!-- Load the saved theme before the page renders to avoid flashing. -->
+  <script>
+    (function () {
+      let theme = 'light';
 
-    <!-- identifies the author of the website -->
-    <meta name="author" content="Laura Aloud">
+      try {
+        const savedTheme = localStorage.getItem('theme');
 
-    <!-- changes the browser theme color to match my portfolio -->
-    <meta name="theme-color" content="#f7dce5">
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          theme = savedTheme;
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        }
+      } catch (error) {
+        // Keep the light theme if browser storage is unavailable.
+      }
 
-    <!-- adds my personal logo as the browser tab icon -->
-    <link rel="icon" href="images/laura-logo.png">
-    <link rel="stylesheet" href="style.css">
-    <title>Laura Aloud | Portfolio</title>
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+
+  <!-- Load the two fonts used throughout the portfolio. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- Portfolio styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <a href="#home">
-            <img src="images/laura-logo.png" width="120" alt="Laura Aloud logo">
-        </a>
+  <!-- Keyboard shortcut to skip the navigation. -->
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-        <nav aria-label="Primary">
-            <ul>
-                <li><a href="#home">୨୧ Home</a></li>
-                <li><a href="#about">୨୧ About</a></li>
-                <li><a href="#projects">୨୧ Projects</a></li>
-                <li><a href="#contact">୨୧ Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- ---------- HEADER AND NAVIGATION ---------- -->
+  <header class="site-header">
+    <a class="site-logo" href="#home" aria-label="Laura Aloud, home">
+      <img src="images/laura-logo.png" alt="" width="44" height="44">
+    </a>
 
-    <main>
-        <section id="home" aria-labelledby="home-heading">
-            <p>⡞⠳⣄⣀⣠⠞✿⢷ ֹ۪</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-            <h1 id="home-heading">୨୧ Laura Aloud ୨୧</h1>
-            
-            <p>Computer Science Student at Michigan State University with a concentration in Cybersecurity.</p>
-            <p>Interested in software development and cybersecurity.</p>
+    <!-- JavaScript updates this button when the theme changes. -->
+    <button id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+      Dark mode
+    </button>
+  </header>
 
-            <h2>౨ৎ Audio Introduction ౨ৎ</h2>
-            <p>♡ Listen to my introduction:</p>
+  <main id="main-content">
+    <!-- ---------- HOME ---------- -->
+    <section id="home" class="hero" aria-labelledby="home-heading">
+      <div class="hero-grid">
+        <div class="plaque reveal">
+          <h1 id="home-heading">Laura Aloud</h1>
+        </div>
 
-            <audio controls>
-                <source src="audio/intro.m4a" type="audio/mp4">
-                Your browser does not support the audio element.
-            </audio>
-        </section>
+        <div class="hero-content reveal">
+          <p class="eyebrow">Portfolio · 2026</p>
+          <p class="lead">Computer Science Student at Michigan State University</p>
+          <p>Concentration in Cybersecurity</p>
+          <p>Interested in software development, cybersecurity, and emerging technologies.</p>
+          <a class="btn" href="#projects">View Projects</a>
+        </div>
+      </div>
+    </section>
 
-        <p class="decor">⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹</p>
+    <div class="lace-divider" aria-hidden="true"></div>
 
-        <section id="about" aria-labelledby="about-heading">
-            <h2 id="about-heading">୨୧ About Me ୨୧</h2>
+    <!-- ---------- ABOUT ME ---------- -->
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading" class="reveal">About Me</h2>
 
-            <p>I am a Computer Science student at Michigan State University with a concentration in cybersecurity and an interest in software development, cybersecurity, and emerging technologies. I have experience with Python and C++, along with skills in problem solving, analytical thinking, communication, and teamwork.</p>
-        </section>
+      <div class="about-body reveal">
+        <!-- Decorative envelope with a flower tucked inside. -->
+        <div class="envelope" aria-hidden="true">
+          <img class="env-back" src="images/lace-envelope.png" alt="" width="400" height="431">
+          <img class="env-flower" src="images/pressed-flower.png" alt="" width="91" height="200">
+          <img class="env-front" src="images/envelope-front.png" alt="" width="400" height="431">
+        </div>
 
-        <p class="decor">⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹</p>
+        <div class="about-content">
+          <p>I am a Computer Science student at Michigan State University with a concentration in cybersecurity and an interest in software development, cybersecurity, and emerging technologies.</p>
+          <p>I have experience with Python and C++, along with skills in problem solving, analytical thinking, communication, and teamwork.</p>
+        </div>
+      </div>
 
-        <section id="projects" aria-labelledby="projects-heading">
-            <h2 id="projects-heading">୨୧ Projects ୨୧</h2>
+      <!-- Audio introduction stored in the audio folder. -->
+      <div class="audio-introduction reveal">
+        <h3>Audio Introduction</h3>
+        <p>Listen to my introduction:</p>
+        <audio controls preload="metadata" aria-label="Audio introduction">
+          <source src="audio/intro.m4a" type="audio/mp4">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </section>
 
-            <p>A selection of projects I have completed through my computer science coursework.</p>
+    <div class="lace-divider" aria-hidden="true"></div>
 
-            <article>
-                <h3>ᰔ CSE 325: File Integrity Monitor ᰔ</h3>
+    <!-- ---------- PROJECT SCRAPBOOK ---------- -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading" class="reveal">Projects</h2>
+      <p class="reveal">A selection of projects completed through my computer science coursework.</p>
 
-                <p>Developed a C++ file integrity monitoring program that creates a SHA-256 baseline of files in a directory and detects changes during later scans. The program reports files that have been added, removed, or modified.</p>
+      <div class="project-collection" id="project-collection">
+        <!-- Closed scrapbook cover. -->
+        <button type="button" class="cover" id="book-cover"
+                aria-expanded="false" aria-controls="book-open">
+          <span class="cover-label">Projects</span>
+          <span class="cover-hint">Select to open the scrapbook</span>
+        </button>
 
-                <ul>
-                    <li>♡ C++</li>
-                    <li>♡ <abbr title="Secure Hash Algorithm 256-bit">SHA-256</abbr> Hashing</li>
-                    <li>♡ File System Operations</li>
-                </ul>
+        <!-- JavaScript reveals the scrapbook after the cover is clicked. -->
+        <div class="book-open" id="book-open" hidden>
+          <div class="project-switch" role="group" aria-label="Choose a project">
+            <button type="button" data-project="0" aria-pressed="true"
+                    aria-controls="book" aria-label="CSE 325: File Integrity Monitor">
+              CSE 325
+            </button>
+            <button type="button" data-project="1" aria-pressed="false"
+                    aria-controls="book" aria-label="CSE 335: Machine Demonstrator">
+              CSE 335
+            </button>
+          </div>
 
-                <details>
-                    <summary>౨ৎ What does this project do?</summary>
-                    <p>The program creates a baseline of file hashes and compares future scans against it to identify files that have been added, removed, or modified.</p>
-                </details>
+          <div class="book" id="book">
+            <!-- StPageFlip reads these four pages in order. -->
+            <div id="flip">
+              <!-- CSE 325: left photo page -->
+              <div class="page photos">
+                <div class="page-inner">
+                  <figure class="photo" style="--tilt:-2deg">
+                    <img src="images/cse325.png"
+                         alt="File Integrity Monitor running in a terminal and detecting an added file"
+                         loading="lazy">
+                    <figcaption>File Integrity Monitor detecting an added file during a scan.</figcaption>
+                  </figure>
+                </div>
+              </div>
 
-                <figure>
-                    <img src="images/cse325.png" width="600" alt="File Integrity Monitor running in the terminal">
-                    <figcaption>♡ File Integrity Monitor detecting an added file during a scan.</figcaption>
-                </figure>
-            </article>
+              <!-- CSE 325: right description page -->
+              <div class="page text">
+                <div class="page-inner">
+                  <article class="project" id="project-cse325">
+                    <h3>CSE 325: File Integrity Monitor</h3>
+                    <p>Developed a C++ file integrity monitoring program that creates a SHA-256 baseline of files in a directory and detects changes during later scans. The program reports files that have been added, removed, or modified.</p>
+                    <h4>Technologies</h4>
+                    <ul>
+                      <li>C++</li>
+                      <li><abbr title="Secure Hash Algorithm 256-bit">SHA-256</abbr> Hashing</li>
+                      <li>File System Operations</li>
+                    </ul>
+                    <details>
+                      <summary>What does this project do?</summary>
+                      <p>The program creates a baseline of file hashes and compares future scans against it to identify files that have been added, removed, or modified.</p>
+                    </details>
+                  </article>
+                </div>
+              </div>
 
-            <p class="decor">₊˚⊹♡⊹˚₊</p>
+              <!-- CSE 335: left photo page -->
+              <div class="page photos">
+                <div class="page-inner">
+                  <figure class="photo" style="--tilt:2deg">
+                    <img src="images/demo2.gif"
+                         alt="Animated machine system showing a motor and connected components"
+                         loading="lazy">
+                    <figcaption>Machine Demonstrator showing the animated motor and connected machine components.</figcaption>
+                  </figure>
 
-            <article>
-                <h3>ᰔ CSE 335: Machine Demonstrator ᰔ</h3>
+                  <figure class="photo" style="--tilt:-1.5deg">
+                    <img src="images/demo1.gif"
+                         alt="Animated machine integrated into a larger application"
+                         loading="lazy">
+                    <figcaption>Machine system integrated into a larger animated application.</figcaption>
+                  </figure>
+                </div>
+              </div>
 
-                <p>Developed an object-oriented C++ simulation featuring multiple animated machine systems. The project uses reusable components such as motors, pulleys, conveyors, and other moving parts that interact to create different machines and animations within a larger application.</p>
+              <!-- CSE 335: right description page -->
+              <div class="page text">
+                <div class="page-inner">
+                  <article class="project" id="project-cse335">
+                    <h3>CSE 335: Machine Demonstrator</h3>
+                    <p>Developed an object-oriented C++ simulation featuring multiple animated machine systems. The project uses reusable components such as motors, pulleys, conveyors, and other moving parts that interact to create different machines and animations within a larger application.</p>
+                    <h4>Technologies</h4>
+                    <ul>
+                      <li>C++</li>
+                      <li>Object-Oriented Programming</li>
+                      <li>Reusable Components</li>
+                      <li>Animation</li>
+                    </ul>
+                    <details>
+                      <summary>What does this project do?</summary>
+                      <p>The project simulates multiple animated machine systems using reusable components that work together to transfer motion and create different animations.</p>
+                    </details>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                <ul>
-                    <li>♡ C++</li>
-                    <li>♡ Object-Oriented Programming</li>
-                    <li>♡ Reusable Components</li>
-                    <li>♡ Animation</li>
-                </ul>
+          <!-- Buttons for turning pages or closing the scrapbook. -->
+          <div class="book-controls">
+            <button type="button" id="prev">Previous page</button>
+            <button type="button" id="close-book">Close book</button>
+            <button type="button" id="next">Next page</button>
+          </div>
 
-                <details>
-                    <summary>౨ৎ What does this project do?</summary>
-                    <p>The project simulates multiple animated machine systems using reusable components that work together to transfer motion and create different animations.</p>
-                </details>
+          <!-- Announce project changes to screen readers. -->
+          <p class="sr-only" id="book-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
 
-                <figure>
-                    <img src="images/demo2.gif" width="600" alt="Animated machine system running">
-                    <figcaption>♡ Machine Demonstrator showing the animated motor and connected machine components.</figcaption>
-                </figure>
+    <div class="lace-divider" aria-hidden="true"></div>
 
-                <figure>
-                    <img src="images/demo1.gif" width="600" alt="Animated machine integrated into a larger application">
-                    <figcaption>♡ Machine system integrated into a larger animated application.</figcaption>
-                </figure>
-            </article>
-        </section>
+    <!-- ---------- CONTACT ---------- -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="reveal">Contact</h2>
+      <div class="letter reveal">
+        <p>Email: <a href="mailto:aloudlau@msu.edu">aloudlau@msu.edu</a></p>
+        <p>GitHub: <a href="https://github.com/lauraaloud" target="_blank" rel="noopener noreferrer">github.com/lauraaloud</a></p>
+        <img class="decor c-flower" src="images/blossom.png" alt="" width="40" height="41">
+      </div>
+    </section>
+  </main>
 
-        <p class="decor">⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹</p>
+  <!-- ---------- FOOTER ---------- -->
+  <footer class="site-footer">
+    <p>Thanks for visiting my portfolio.</p>
+    <p>&copy; 2026 Laura Aloud</p>
+    <a href="#home">Back to top</a>
+  </footer>
 
-        <section id="contact" aria-labelledby="contact-heading">
-            <h2 id="contact-heading">୨୧ Contact ୨୧</h2>
+  <!-- Third-party JavaScript libraries used for animations and page flipping. -->
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
 
-            <fieldset>
-            <legend>Contact Me</legend>
-
-           
-            <p>♡ Email: <a href="mailto:aloudlau@msu.edu">aloudlau@msu.edu</a></p>
-            
-
-            <p>♡ GitHub: <a href="https://github.com/lauraaloud">github.com/lauraaloud</a></p>
-            </fieldset>
-        </section>
-    </main>
-
-    <footer>
-        <p class="decor">⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹</p>
-
-        <p>୨୧ Thanks for visiting my portfolio ୨୧</p>
-
-        <p>Copyright &copy; 2026 Laura Aloud</p>
-
-        <p><a href="#home">౨ৎ Back to top ౨ৎ</a></p>
-
-        <p class="decor">₊˚⊹♡⊹˚₊</p>
-    </footer>
-
-    <!-- third-party ScrollReveal library -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- my JavaScript code -->
-    <script src="script.js"></script>
+  <!-- My JavaScript for theme switching and scrapbook interactions. -->
+  <script src="script.js"></script>
 </body>
-
 </html>
